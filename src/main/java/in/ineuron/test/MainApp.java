@@ -1,5 +1,7 @@
 package in.ineuron.test;
 
+import java.util.Arrays;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import in.ineuron.comp.WishMessageGenerator;
 
@@ -8,6 +10,8 @@ public class MainApp {
 	
 		System.out.println("*************ClassPathXmlApplicationContext container starting***************");
 		ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("/in/ineuron/cfg/applicationContext.xml");
+		System.out.println("No of beans is :: " + classPathXmlApplicationContext.getBeanDefinitionCount());
+		System.out.println("Bead id is :: " + Arrays.toString(classPathXmlApplicationContext.getBeanDefinitionNames()));
 		
 		System.out.println("*************ClassPathXmlApplicationContext container started************");
 		
